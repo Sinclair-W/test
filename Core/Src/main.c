@@ -94,9 +94,9 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-      time = HAL_GetTick();
       if ((HAL_GetTick() - time) >= LED_SINGLE_BLINK_TIME)
       {
+				time = HAL_GetTick();
         HAL_GPIO_TogglePin(LED0_GPIO_Port, LED0_Pin);
       }
     /* USER CODE END WHILE */

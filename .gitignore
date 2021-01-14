@@ -1,0 +1,5 @@
+*.o
+*.uvguix.*
+MDK-ARM/test
+MDK-ARM/RTE
+MDK-ARM/DebugConfig
