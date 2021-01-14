@@ -98,6 +98,7 @@ int main(void)
       {
 				time = HAL_GetTick();
         HAL_GPIO_TogglePin(LED0_GPIO_Port, LED0_Pin);
+        HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
       }
     /* USER CODE END WHILE */
 
