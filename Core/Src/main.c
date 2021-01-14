@@ -32,6 +32,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+#define LED_SINGLE_BLINK_TIME 100
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -42,7 +43,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+static uint32_t time = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -93,6 +94,11 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+      time = HAL_GetTick();
+      if ((HAL_GetTick() - time) >= LED_SINGLE_BLINK_TIME)
+      {
+        HAL_GPIO_TogglePin(LED0_GPIO_Port, LED0_Pin);
+      }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
