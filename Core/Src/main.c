@@ -98,6 +98,7 @@ int main(void)
       if ((HAL_GetTick() - time) >= LED_SINGLE_BLINK_TIME)
       {
         HAL_GPIO_TogglePin(LED0_GPIO_Port, LED0_Pin);
+        HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
       }
     /* USER CODE END WHILE */
 
